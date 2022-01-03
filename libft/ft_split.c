@@ -52,7 +52,7 @@ char	*ft_mallocstrc(char *dest, char const *src, char c)
 
 	i = 0;
 	size = ft_strlenc(src, c);
-	dest = malloc(sizeof(dest) * size);
+	dest = malloc(size + 1);
 	if (!dest)
 		return (NULL);
 	while (src[i] != '\0' && src[i] != c)
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	y = 0;
-	new_strs = (char **)ft_memalloc(sizeof(char *) * (ft_nbwords(s, c) + 1));
+	new_strs = ft_memalloc(sizeof(char *) * (ft_nbwords(s, c) + 1));
 	if (!new_strs)
 		return (0);
 	while (s[i] != '\0')

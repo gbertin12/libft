@@ -40,7 +40,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	while (s1[start] != '\0' && s_in_set(s1[start], set))
 		start++;
-	while (end > start != '\0' && s_in_set(s1[end - 1], set))
+	while (end > start && s_in_set(s1[end - 1], set))
 		end--;
 	cpy = (char *)malloc(sizeof(*s1) * (end - start + 1));
 	if (!cpy)
