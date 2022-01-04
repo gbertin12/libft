@@ -57,8 +57,4 @@ void		ft_putstr_fd(char const *s, int fd);
 void		ft_putendl_fd(char const *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 
-int			ft_islower(int c);
-int			ft_isupper(int c);
-void		*ft_memalloc(size_t size);
-
 #endif

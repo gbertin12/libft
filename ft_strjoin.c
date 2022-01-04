@@ -12,6 +12,19 @@
 
 #include"libft.h"
 
+static void	*ft_memalloc(size_t size)
+{
+	void	*new_memory;
+
+	new_memory = malloc(size);
+	if (new_memory)
+	{
+		ft_bzero(new_memory, size);
+		return (new_memory);
+	}
+	return (NULL);
+}
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	unsigned int	len_s;

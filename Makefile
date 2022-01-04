@@ -23,7 +23,6 @@ SRC=ft_isalpha.c \
 	ft_memset.c  \
 	ft_bzero.c   \
 	ft_memcpy.c  \
-	ft_memalloc.c \
 	ft_memmove.c \
 	ft_strdup.c  \
 	ft_strlcpy.c \
@@ -48,10 +47,7 @@ SRC=ft_isalpha.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c \
-	ft_islower.c \
-	ft_isupper.c 
-	
+	ft_putnbr_fd.c 
 
 OBJ=$(SRC:.c=.o)
 
@@ -71,4 +67,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean
+.PHONY: clean all fclean re

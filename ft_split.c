@@ -12,7 +12,20 @@
 
 #include"libft.h"
 
-int	ft_nbwords(char const *s, char c)
+static void	*ft_memalloc(size_t size)
+{
+	void	*new_memory;
+
+	new_memory = malloc(size);
+	if (new_memory)
+	{
+		ft_bzero(new_memory, size);
+		return (new_memory);
+	}
+	return (NULL);
+}
+
+static int	ft_nbwords(char const *s, char c)
 {
 	unsigned int	nb_words;
 	unsigned int	i;
@@ -33,7 +46,7 @@ int	ft_nbwords(char const *s, char c)
 	return (nb_words);
 }
 
-int	ft_strlenc(const char *s, char c)
+static int	ft_strlenc(const char *s, char c)
 {
 	unsigned int	i;
 
@@ -45,7 +58,7 @@ int	ft_strlenc(const char *s, char c)
 	return (i);
 }
 
-char	*ft_mallocstrc(char *dest, char const *src, char c)
+static char	*ft_mallocstrc(char *dest, char const *src, char c)
 {
 	unsigned int	size;
 	unsigned int	i;
